@@ -108,7 +108,7 @@ public class AutoDuper implements Wrapper {
 		}
 		
 		if(stage == 1) {
-			if(mc.player == null || mc.world == null) return;
+			if(!(mc.player.inventory.getMainHandStack().getItem() == Items.WRITABLE_BOOK)) return;
 			restticks++;
 			if(restticks > 35) {
 				stage = 0;
